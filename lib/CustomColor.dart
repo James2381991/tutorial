@@ -8,12 +8,14 @@ class CustomColor {
 }
 class CustomWidget {
 
-  static AppBar appBarCustom (BuildContext context,String title,bool isDrawer,var homeClick)
+  static AppBar appBarCustom (BuildContext context,String title,bool isDrawer,bool isLight,var homeClick)
   {
     return AppBar(
       // Here we take the value from the MyHomePage object that was created by
       // the App.build method, and use it to set our appbar title.
       title: Text(title),
+      brightness: isLight ? Brightness.light : Brightness.dark, // or use Brightness.dark
+
       leading: isDrawer ? InkWell(splashColor: Colors.red,
         onTap:homeClick,
         child: Icon(

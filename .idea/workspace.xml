@@ -23,11 +23,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7cdf14e-f658-4771-a529-0b2fdd75322d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/CustomColor.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Home.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/myApp.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/.last_build_id" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/.last_build_id" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/fonts/OpenSans-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/fonts/OpenSans-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/fonts/Poppins-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/fonts/Poppins-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/fonts/Poppins-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/fonts/Poppins-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/fonts/Poppins-SemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/button_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/check_off.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/check_on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/comment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/correct.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/dd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/dot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/hamburger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/like.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/pencil.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/search_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/search_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/share.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/temp1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/unlike.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/upload.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/vertical_dots.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/youtube.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CustomColor.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CustomColor.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Home.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/myApp.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/myApp.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,12 +88,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
+    <property name="settings.editor.selected.configurable" value="dart.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
@@ -93,23 +130,32 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="201" key="GridCell.Tab.0.bottom" timestamp="1603808647645">
+    <state width="1398" height="169" key="GridCell.Tab.0.bottom" timestamp="1603901520407">
       <screen x="0" y="23" width="1440" height="806" />
     </state>
-    <state width="1398" height="201" key="GridCell.Tab.0.bottom/0.23.1440.806@0.23.1440.806" timestamp="1603808647645" />
-    <state width="1398" height="201" key="GridCell.Tab.0.center" timestamp="1603808647643">
+    <state width="1398" height="169" key="GridCell.Tab.0.bottom/0.23.1440.806@0.23.1440.806" timestamp="1603901520407" />
+    <state width="1398" height="108" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1603895877875" />
+    <state width="1398" height="169" key="GridCell.Tab.0.center" timestamp="1603901520406">
       <screen x="0" y="23" width="1440" height="806" />
     </state>
-    <state width="1398" height="201" key="GridCell.Tab.0.center/0.23.1440.806@0.23.1440.806" timestamp="1603808647643" />
-    <state width="1398" height="201" key="GridCell.Tab.0.left" timestamp="1603808647641">
+    <state width="1398" height="169" key="GridCell.Tab.0.center/0.23.1440.806@0.23.1440.806" timestamp="1603901520406" />
+    <state width="1398" height="108" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1603895877872" />
+    <state width="1398" height="169" key="GridCell.Tab.0.left" timestamp="1603901520406">
       <screen x="0" y="23" width="1440" height="806" />
     </state>
-    <state width="1398" height="201" key="GridCell.Tab.0.left/0.23.1440.806@0.23.1440.806" timestamp="1603808647641" />
-    <state width="1398" height="201" key="GridCell.Tab.0.right" timestamp="1603808647645">
+    <state width="1398" height="169" key="GridCell.Tab.0.left/0.23.1440.806@0.23.1440.806" timestamp="1603901520406" />
+    <state width="1398" height="108" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1603895877871" />
+    <state width="1398" height="169" key="GridCell.Tab.0.right" timestamp="1603901520407">
       <screen x="0" y="23" width="1440" height="806" />
     </state>
-    <state width="1398" height="201" key="GridCell.Tab.0.right/0.23.1440.806@0.23.1440.806" timestamp="1603808647645" />
+    <state width="1398" height="169" key="GridCell.Tab.0.right/0.23.1440.806@0.23.1440.806" timestamp="1603901520407" />
+    <state width="1398" height="108" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1603895877874" />
+    <state x="221" y="65" key="SettingsEditor" timestamp="1603896583949">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state x="221" y="65" key="SettingsEditor/0.23.1440.806@0.23.1440.806" timestamp="1603896583949" />
   </component>
 </project>
