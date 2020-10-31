@@ -1,13 +1,11 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_app1/CustomColor.dart';
-import 'package:flutter_app1/ImageTutorial.dart';
-import 'package:flutter_app1/InkWellTutorial.dart';
-import 'package:flutter_app1/TextTutorial.dart';
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+class InkWellTutorial extends StatefulWidget {
+  InkWellTutorial({Key key, this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -21,50 +19,18 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _InkWellTutorialState createState() => _InkWellTutorialState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  List<String> arrTutorial = ['Text','Inkwell','Image'];
-
+class _InkWellTutorialState extends State<InkWellTutorial> {
+var color = Colors.black;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+
   }
-  void Redirect(int index)
-  {
-    if(index == 0)
-    {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-            builder: (context) => TextTutorial(
-              title: arrTutorial[index],
-            )),
-      );
-    }
-    else if(index == 1)
-    {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-            builder: (context) => InkWellTutorial(
-              title: arrTutorial[index],
-            )),
-      );
-    }
-    else if(index == 2)
-    {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-            builder: (context) => ImageTutorial(
-              title: arrTutorial[index],
-            )),
-      );
-    }
-  }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -79,20 +45,42 @@ class _MyHomePageState extends State<MyHomePage> {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20),
-            child: ListView.builder(
-                itemCount: arrTutorial.length,
-                itemBuilder: (BuildContext ctxt, int index) {
-                  return InkWell(onTap: (){
-                    Redirect(index);
-                  },
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [Text(arrTutorial[index],style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),), Divider()],
-                    ),
-                  );
-                }),
-          ),
+              padding: const EdgeInsets.symmetric(vertical: 20),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      InkWell(onTap: (){
+                        print('click action');
+
+                      },focusColor: Colors.red,splashColor: Colors.blue,onTapDown: (a){
+                        color = Colors.red;
+                        setState(() {
+
+                        });
+                      },onTapCancel: (){
+                        color = Colors.black;
+                        setState(() {
+
+                        });
+                      },
+                        child: Text(
+                          'Click',
+                          overflow: TextOverflow.clip,
+                          textDirection: TextDirection.rtl,
+                          style: TextStyle(
+                            fontFamily: 'OpenSans-Light',
+                            fontSize: 40,color: color,
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
+                      ),
+
+                    ],
+                  ),
+
+                ],
+              )),
         )
         // Center(
         //   // Center is a layout widget. It takes a single child and positions it
