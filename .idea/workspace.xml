@@ -23,15 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7cdf14e-f658-4771-a529-0b2fdd75322d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/ImageTutorial.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/InkWellTutorial.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/TextTutorial.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ColumnTutorial.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/GridViewTutorial.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ListViewTutorial.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/RowTutorial.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/StackTutorial.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/CustomColor.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CustomColor.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Home.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/myApp.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/myApp.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,12 +63,12 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/assets" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">

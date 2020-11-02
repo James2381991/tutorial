@@ -8,12 +8,23 @@ class CustomColor {
 }
 class CustomWidget {
 
-  static AppBar appBarCustom (BuildContext context,String title)
+  static AppBar appBarCustom (BuildContext context1,String title)
   {
     return AppBar(
       // Here we take the value from the MyHomePage object that was created by
       // the App.build method, and use it to set our appbar title.
-      title: Text(title),
+      title: Row(mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            'assets/images/temp1.png',
+            width: 30,
+            height: 30,
+            fit: BoxFit.cover,
+            alignment: Alignment.topRight,
+          ),
+          Text(title),
+        ],
+      ),
 
     );
   }
