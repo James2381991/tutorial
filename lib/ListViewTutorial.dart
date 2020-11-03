@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_app1/CustomColor.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class ListViewTutorial extends StatefulWidget {
   ListViewTutorial({Key key, this.title}) : super(key: key);
@@ -33,7 +34,8 @@ class _ListViewTutorialState extends State<ListViewTutorial> {
     'ListView',
     'GridView'
   ];
-
+  RefreshController _refreshController =
+      RefreshController(initialRefresh: false);
   @override
   void initState() {
     // TODO: implement initState
@@ -53,30 +55,58 @@ class _ListViewTutorialState extends State<ListViewTutorial> {
         body: Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
-          child: ListView.builder(
-              itemCount: arrTutorial.length,
-              itemBuilder: (BuildContext context, int index) {
+          child: NotificationListener<ScrollNotification>(
+            onNotification: (ScrollNotification scrollInfo) {
+              if ((scrollInfo.metrics.pixels == scrollInfo.metrics.maxScrollExtent)) {
+                // start loading data
 
-                return  Dismissible(
-                  // Show a red background as the item is swiped away.
-                  background: Container(color: Colors.blue,alignment: Alignment.topLeft,height: 30,
-                    child: Image.asset(
-                      'assets/images/back.png',
-                      width: 1,
-                      height: 1,
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                  key: Key(arrTutorial[index]),
-                  onDismissed: (direction) {
-                    setState(() {
-                      arrTutorial.removeAt(index);
-                    });
+              }
+              return true;
+            },
+            child: SmartRefresher(
+              header: ClassicHeader(
+                completeText: "",
+                completeIcon: Container(),
+                idleText: "",
+                idleIcon: Container(),
+                completeDuration: const Duration(milliseconds: 2000),
+              ),
+              controller: _refreshController,
+              onRefresh: () async {
+                _refreshController.refreshCompleted();
+              },
+              child: ListView.builder(
+                  itemCount: arrTutorial.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Dismissible(
+                        // Show a red background as the item is swiped away.
+                        background: Container(
+                          color: Colors.blue,
+                          alignment: Alignment.topLeft,
+                          height: 30,
+                          child: Image.asset(
+                            'assets/images/back.png',
+                            width: 1,
+                            height: 1,
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        key: Key(arrTutorial[index]),
+                        onDismissed: (direction) {
+                          setState(() {
+                            arrTutorial.removeAt(index);
+                          });
 
-                    Scaffold.of(context).showSnackBar(
-                        SnackBar(content: Text("$arrTutorial dismissed")));
-                  },child: Text(arrTutorial[index],style: TextStyle(fontSize: 40),));
-              }),
+                          Scaffold.of(context).showSnackBar(
+                              SnackBar(content: Text("$arrTutorial dismissed")));
+                        },
+                        child: Text(
+                          arrTutorial[index],
+                          style: TextStyle(fontSize: 40),
+                        ));
+                  }),
+            ),
+          ),
         )
         // Center(
         //   // Center is a layout widget. It takes a single child and positions it

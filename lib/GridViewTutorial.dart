@@ -24,6 +24,65 @@ class GridViewTutorial extends StatefulWidget {
 
 class _GridViewTutorialState extends State<GridViewTutorial> {
   var color = Colors.black;
+  List<String> arrTutorial = [
+    'Text',
+    'Inkwell',
+    'Image',
+    'Column',
+    'Row',
+    'Stack',
+    'ListView',
+    'GridView',
+    'Inkwell',
+    'Image',
+    'Column',
+    'Row',
+    'Stack',
+    'ListView',
+    'GridView',
+    'Inkwell',
+    'Image',
+    'Column',
+    'Row',
+    'Stack',
+    'ListView',
+    'GridView',
+    'Inkwell',
+    'Image',
+    'Column',
+    'Row',
+    'Stack',
+    'ListView',
+    'GridView',
+    'Inkwell',
+    'Image',
+    'Column',
+    'Row',
+    'Stack',
+    'ListView',
+    'GridView',
+    'Inkwell',
+    'Image',
+    'Column',
+    'Row',
+    'Stack',
+    'ListView',
+    'GridView',
+    'Inkwell',
+    'Image',
+    'Column',
+    'Row',
+    'Stack',
+    'ListView',
+    'GridView',
+    'Inkwell',
+    'Image',
+    'Column',
+    'Row',
+    'Stack',
+    'ListView',
+    'GridView'
+  ];
   @override
   void initState() {
     // TODO: implement initState
@@ -43,7 +102,30 @@ class _GridViewTutorialState extends State<GridViewTutorial> {
         body: Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
-
+          child: NotificationListener<ScrollNotification>(
+            onNotification: (ScrollNotification scrollInfo) {
+              if ((scrollInfo.metrics.pixels ==
+                  scrollInfo.metrics.maxScrollExtent)) {
+                // start loading data
+                print('end');
+              }
+              return true;
+            },
+            child: GridView.builder(
+              itemCount: arrTutorial.length,
+              gridDelegate:
+                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+              itemBuilder: (BuildContext context, int index) {
+                return new Card(
+                  child: new GridTile(
+                    footer: new Text(arrTutorial[index]),
+                    child: new Text(arrTutorial[
+                        index]), //just for testing, will fill with image later
+                  ),
+                );
+              },
+            ),
+          ),
         )
         // Center(
         //   // Center is a layout widget. It takes a single child and positions it
