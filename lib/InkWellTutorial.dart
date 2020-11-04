@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_app1/CustomColor.dart';
+import 'package:flutter_app1/ListViewTutorial.dart';
 
 class InkWellTutorial extends StatefulWidget {
   InkWellTutorial({Key key, this.title}) : super(key: key);
@@ -52,6 +53,13 @@ var color = Colors.black;
                     children: [
                       InkWell(onTap: (){
                         print('click action');
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ListViewTutorial(
+                                title: 'Listview',
+                              )),
+                        );
 
                       },focusColor: Colors.red,splashColor: Colors.blue,onTapDown: (a){
                         color = Colors.red;

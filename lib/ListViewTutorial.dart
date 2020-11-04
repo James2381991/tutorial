@@ -100,9 +100,14 @@ class _ListViewTutorialState extends State<ListViewTutorial> {
                           Scaffold.of(context).showSnackBar(
                               SnackBar(content: Text("$arrTutorial dismissed")));
                         },
-                        child: Text(
-                          arrTutorial[index],
-                          style: TextStyle(fontSize: 40),
+                        child: InkWell(onTap: (){
+                          int count = 0;
+                          Navigator.popUntil(context, (route) => count++ == 3);
+                        },
+                          child: Text(
+                            arrTutorial[index],
+                            style: TextStyle(fontSize: 40),
+                          ),
                         ));
                   }),
             ),

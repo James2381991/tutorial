@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_app1/CustomColor.dart';
+import 'package:flutter_app1/InkWellTutorial.dart';
 
 class TextTutorial extends StatefulWidget {
   TextTutorial({Key key, this.title}) : super(key: key);
@@ -104,6 +105,13 @@ class _TextTutorialState extends State<TextTutorial> {
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
                           print('Terms of Service"');
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => InkWellTutorial(
+                                  title: 'Inkwell',
+                                )),
+                          );
                         },
                       style: TextStyle(
                         fontFamily: 'OpenSans-Light',
