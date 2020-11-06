@@ -25,7 +25,7 @@ class TextFieldTutorialState extends State<TextFieldTutorial> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: CustomWidget.appBarCustom(context, widget.title),resizeToAvoidBottomPadding: ,
+        appBar: CustomWidget.appBarCustom(context, widget.title),
         body: InkWell(
           onTap: () {
             print('screen tap');
