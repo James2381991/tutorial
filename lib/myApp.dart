@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_app1/ButtonTutorial.dart';
 import 'package:flutter_app1/ColumnTutorial.dart';
 import 'package:flutter_app1/CustomColor.dart';
 import 'package:flutter_app1/GridViewTutorial.dart';
@@ -31,7 +32,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<String> arrTutorial = ['Text','Inkwell','Image','Column','Row','Stack','ListView','GridView','TextField'];
+  List<String> arrTutorial = ['Text','Inkwell','Image','Column','Row','Stack','ListView','GridView','TextField','Button'];
 
   @override
   void initState() {
@@ -126,6 +127,16 @@ class _MyHomePageState extends State<MyHomePage> {
         context,
         MaterialPageRoute(
             builder: (context) => TextFieldTutorial(
+              title: arrTutorial[index],
+            )),
+      );
+    }
+    else if(index == 9)
+    {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => ButtonTutorial(
               title: arrTutorial[index],
             )),
       );

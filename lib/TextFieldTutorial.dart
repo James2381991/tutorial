@@ -25,7 +25,7 @@ class TextFieldTutorialState extends State<TextFieldTutorial> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: CustomWidget.appBarCustom(context, widget.title),
+        appBar: CustomWidget.appBarCustom(context, widget.title),resizeToAvoidBottomPadding: ,
         body: InkWell(
           onTap: () {
             print('screen tap');
@@ -42,41 +42,43 @@ class TextFieldTutorialState extends State<TextFieldTutorial> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(20.0),
-                      child: Card(
-                          child: TextField(
-                        controller: txtname,
-                        cursorColor: Colors.red,
-                        style: TextStyle(),
-                        decoration: InputDecoration(
-                          hintText: 'name',
-                          prefixIcon: Padding(
-                            padding: const EdgeInsets.only(left: 10),
-                            child: Icon(Icons.margin),
+                      child: Container(height: 60,
+                        child: Card(
+                            child: TextField(
+                          controller: txtname,
+                          cursorColor: Colors.red,
+                          style: TextStyle(),
+                          decoration: InputDecoration(
+                            hintText: 'name',
+                            prefixIcon: Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: Icon(Icons.margin),
+                            ),
+                            labelText: 'Name',
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Colors.greenAccent, width: 1.0),
+                            ),
+                            errorText: valid(),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide:
+                                  BorderSide(color: Colors.red, width: 1.0),
+                            ),
                           ),
-                          labelText: 'Name',
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Colors.greenAccent, width: 1.0),
-                          ),
-                          errorText: valid(),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(color: Colors.red, width: 1.0),
-                          ),
-                        ),
-                        onChanged: (a) {
-                          print(a);
-                          setState(() {});
-                        },
-                        obscureText: true,
-                        focusNode: fn,
-                        onSubmitted: (a) {
-                          print('end');
-                        },
-                        onTap: () {
-                          print('start');
-                        },
-                      )),
+                          onChanged: (a) {
+                            print(a);
+                            setState(() {});
+                          },
+                          obscureText: true,
+                          focusNode: fn,
+                          onSubmitted: (a) {
+                            print('end');
+                          },
+                          onTap: () {
+                            print('start');
+                          },
+                        )),
+                      ),
                     ),
                     SizedBox(
                       height: 20,
