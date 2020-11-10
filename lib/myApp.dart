@@ -1,13 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_app1/AlertDialogTutorial.dart';
 import 'package:flutter_app1/ButtonTutorial.dart';
+import 'package:flutter_app1/CheckboxTutorial.dart';
 import 'package:flutter_app1/ColumnTutorial.dart';
 import 'package:flutter_app1/CustomColor.dart';
 import 'package:flutter_app1/GridViewTutorial.dart';
 import 'package:flutter_app1/ImageTutorial.dart';
 import 'package:flutter_app1/InkWellTutorial.dart';
 import 'package:flutter_app1/ListViewTutorial.dart';
+import 'package:flutter_app1/RadioTutorial.dart';
 import 'package:flutter_app1/RowTutorial.dart';
 import 'package:flutter_app1/StackTutorial.dart';
 import 'package:flutter_app1/TextFieldTutorial.dart';
@@ -32,116 +35,135 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<String> arrTutorial = ['Text','Inkwell','Image','Column','Row','Stack','ListView','GridView','TextField','Button'];
+  List<String> arrTutorial = [
+    'Text',
+    'Inkwell',
+    'Image',
+    'Column',
+    'Row',
+    'Stack',
+    'ListView',
+    'GridView',
+    'TextField',
+    'Button',
+    'Checkbox',
+    'Radio & Slider & Switch','AlertDialog'
+  ];
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
   }
-  void Redirect(int index)
-  {
-    if(index == 0)
-    {
+
+  void Redirect(int index) {
+    if (index == 0) {
       Navigator.push(
         context,
         MaterialPageRoute(
             builder: (context) => TextTutorial(
-              title: arrTutorial[index],
-            )),
+                  title: arrTutorial[index],
+                )),
       );
-    }
-    else if(index == 1)
-    {
+    } else if (index == 1) {
       Navigator.push(
         context,
         MaterialPageRoute(
             builder: (context) => InkWellTutorial(
-              title: arrTutorial[index],
-            )),
+                  title: arrTutorial[index],
+                )),
       );
-    }
-    else if(index == 2)
-    {
+    } else if (index == 2) {
       Navigator.push(
         context,
         MaterialPageRoute(
             builder: (context) => ImageTutorial(
-              title: arrTutorial[index],
-            )),
+                  title: arrTutorial[index],
+                )),
       );
-    }
-    else if(index == 3)
-    {
+    } else if (index == 3) {
       Navigator.push(
         context,
         MaterialPageRoute(
             builder: (context) => ColumnTutorial(
-              title: arrTutorial[index],
-            )),
+                  title: arrTutorial[index],
+                )),
       );
-    }
-    else if(index == 4)
-    {
+    } else if (index == 4) {
       Navigator.push(
         context,
         MaterialPageRoute(
             builder: (context) => RowTutorial(
-              title: arrTutorial[index],
-            )),
+                  title: arrTutorial[index],
+                )),
       );
-    }
-    else if(index == 5)
-    {
+    } else if (index == 5) {
       Navigator.push(
         context,
         MaterialPageRoute(
             builder: (context) => StackTutorial(
-              title: arrTutorial[index],
-            )),
+                  title: arrTutorial[index],
+                )),
       );
-    }
-    else if(index == 6)
-    {
+    } else if (index == 6) {
       Navigator.push(
         context,
         MaterialPageRoute(
             builder: (context) => ListViewTutorial(
-              title: arrTutorial[index],
-            )),
+                  title: arrTutorial[index],
+                )),
       );
-    }
-    else if(index == 7)
-    {
+    } else if (index == 7) {
       Navigator.push(
         context,
         MaterialPageRoute(
             builder: (context) => GridViewTutorial(
-              title: arrTutorial[index],
-            )),
+                  title: arrTutorial[index],
+                )),
       );
-    }
-    else if(index == 8)
-    {
+    } else if (index == 8) {
       Navigator.push(
         context,
         MaterialPageRoute(
             builder: (context) => TextFieldTutorial(
-              title: arrTutorial[index],
-            )),
+                  title: arrTutorial[index],
+                )),
       );
-    }
-    else if(index == 9)
-    {
+    } else if (index == 9) {
       Navigator.push(
         context,
         MaterialPageRoute(
             builder: (context) => ButtonTutorial(
+                  title: arrTutorial[index],
+                )),
+      );
+    } else if (index == 10) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => CheckBoxTutorial(
+                  title: arrTutorial[index],
+                )),
+      );
+    } else if (index == 11) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => RadioTutorial(
+              title: arrTutorial[index],
+            )),
+      );
+    } else if (index == 12) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => AlertDialogTutorial(
               title: arrTutorial[index],
             )),
       );
     }
   }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -160,12 +182,20 @@ class _MyHomePageState extends State<MyHomePage> {
             child: ListView.builder(
                 itemCount: arrTutorial.length,
                 itemBuilder: (BuildContext ctxt, int index) {
-                  return InkWell(onTap: (){
-                    Redirect(index);
-                  },
+                  return InkWell(
+                    onTap: () {
+                      Redirect(index);
+                    },
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [Text(arrTutorial[index],style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),), Divider()],
+                      children: [
+                        Text(
+                          arrTutorial[index],
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.w600),
+                        ),
+                        Divider()
+                      ],
                     ),
                   );
                 }),

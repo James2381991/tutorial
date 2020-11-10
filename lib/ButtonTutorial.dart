@@ -23,7 +23,18 @@ class ButtonTutorial extends StatefulWidget {
   @override
   _ButtonTutorialState createState() => _ButtonTutorialState();
 }
+class ListTileCursor extends MaterialStateMouseCursor {
+  @override
+  MouseCursor resolve(Set<MaterialState> states) {
+    // if (states.contains(MaterialState.disabled)) {
+    //   return SystemMouseCursors.forbidden;
+    // }
+    return SystemMouseCursors.forbidden;
+  }
 
+  @override
+  String get debugDescription => 'ListTileCursor()';
+}
 class _ButtonTutorialState extends State<ButtonTutorial> {
   var color = Colors.black;
   bool expanded = false;
@@ -63,6 +74,8 @@ class _ButtonTutorialState extends State<ButtonTutorial> {
                 children: [
                   FlatButton(
                     color: Colors.blue,
+                    shape: new RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(50.0)),
                     textColor: Colors.white,
                     disabledColor: Colors.grey,
                     disabledTextColor: Colors.black,
@@ -100,9 +113,10 @@ class _ButtonTutorialState extends State<ButtonTutorial> {
                       print('Received click');
                     },
                     borderSide: BorderSide(width: 5),
+                    visualDensity: VisualDensity(horizontal: 3),
                     shape: new RoundedRectangleBorder(
                         borderRadius: new BorderRadius.circular(30.0)),
-                    child: Text('Click Me'),
+                    child: Text('Click Me',style: TextStyle(fontSize: 50),),
                   ),
                   RaisedButton(
                     child: const Text('Hello'),
@@ -123,7 +137,7 @@ class _ButtonTutorialState extends State<ButtonTutorial> {
                       children: <Widget>[
                         new RaisedButton(
                           child: new Text('Hello'),
-                          onPressed: null,
+                          onPressed: null,mouseCursor: ListTileCursor(),
                         ),
                         new RaisedButton(
                           child: new Text('Hi'),
