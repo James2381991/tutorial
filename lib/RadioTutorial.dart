@@ -82,7 +82,7 @@ class _RadioTutorialState extends State<RadioTutorial> {
                 Slider(
                   value: _currentSliderValue,
                   min: 0,
-                  max: 250,
+                  max: 250,divisions: 5,
                   onChangeEnd: (a) {
                     print(a);
                   },

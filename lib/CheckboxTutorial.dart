@@ -47,7 +47,7 @@ class _CheckBoxTutorialState extends State<CheckBoxTutorial> {
     super.initState();
   }
 
-  var _isChecked = ['two', 'one'];
+  var _isChecked = [];
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -56,39 +56,48 @@ class _CheckBoxTutorialState extends State<CheckBoxTutorial> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
+
     return Scaffold(
         appBar: CustomWidget.appBarCustom(context, widget.title),
 
         body: Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
-          child: Container(
-            height: 350.0,
-            child: Column(
-              children: ['one', 'two', 'three']
-                  .map((t) => CheckboxListTile(
-                        title: Row(
-                          children: [
-                            Text(t),Text(t)
-                          ],
-                        ),
-                        subtitle: Text(t),tristate: true,
-                        value: _isChecked.contains(t),
-                        checkColor: Colors.green,
-                        activeColor: Colors.red,
-                        contentPadding: EdgeInsets.symmetric(horizontal: 50),
-                        dense: true,secondary: Text(t),
-                        onChanged: (val) {
-                          if (_isChecked.contains(t)) {
-                            _isChecked.remove(t);
-                          } else {
-                            _isChecked.add(t);
-                          }
-                          setState(() {});
-                        },
-                      ))
-                  .toList(),
-            ),
+          child: Column(
+            children: [
+              Container(
+                height: 350.0,
+                child: Column(
+                  children: ['one', 'two', 'three']
+                      .map((t) => CheckboxListTile(
+                            title: Row(
+                              children: [
+                                Text(t),Text(t)
+                              ],
+                            ),
+                            subtitle: Text(t),tristate: true,
+                            value: _isChecked.contains(t),
+                            checkColor: Colors.green,
+                            activeColor: Colors.red,
+                            contentPadding: EdgeInsets.symmetric(horizontal: 50),
+                            dense: true,secondary: Text(t),
+                            onChanged: (val) {
+                              print(t);
+                              if (_isChecked.contains(t)) {
+                                _isChecked.remove(t);
+                              } else {
+                                _isChecked.add(t);
+                              }
+                              setState(() {});
+                            },
+                          ))
+                      .toList(),
+                ),
+              ),
+              InkWell(child: Text('Click'),onTap: (){
+                print(_isChecked);
+              },)
+            ],
           ),
         ));
   }

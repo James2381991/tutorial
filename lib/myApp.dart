@@ -2,10 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_app1/AlertDialogTutorial.dart';
+import 'package:flutter_app1/BottomSheetTutorial.dart';
 import 'package:flutter_app1/ButtonTutorial.dart';
 import 'package:flutter_app1/CheckboxTutorial.dart';
 import 'package:flutter_app1/ColumnTutorial.dart';
 import 'package:flutter_app1/CustomColor.dart';
+import 'package:flutter_app1/ExpandedPanelTutorial.dart';
 import 'package:flutter_app1/GridViewTutorial.dart';
 import 'package:flutter_app1/ImageTutorial.dart';
 import 'package:flutter_app1/InkWellTutorial.dart';
@@ -47,7 +49,8 @@ class _MyHomePageState extends State<MyHomePage> {
     'TextField',
     'Button',
     'Checkbox',
-    'Radio & Slider & Switch','AlertDialog'
+    'Radio & Slider & Switch','AlertDialog',
+    'Bottom sheet','Expanded Panel'
   ];
 
   @override
@@ -158,6 +161,22 @@ class _MyHomePageState extends State<MyHomePage> {
         context,
         MaterialPageRoute(
             builder: (context) => AlertDialogTutorial(
+              title: arrTutorial[index],
+            )),
+      );
+    }else if (index == 13) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BottomSheetTutorial(
+              title: arrTutorial[index],
+            )),
+      );
+    }else if (index == 14) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => ExpandedPanelTutorial(
               title: arrTutorial[index],
             )),
       );
